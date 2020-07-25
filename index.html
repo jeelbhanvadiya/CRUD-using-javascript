@@ -1,0 +1,236 @@
+<htmL>
+<head><title>form</title>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+      <link rel="stylesheet" href="mycss.css">
+
+<body>
+     
+  <div class="container">
+     <form> 
+    
+          <h2>
+          <u><b>Registation Form</b>  </u>
+          </h2>
+
+               <div class="row">
+
+                   <div class="col-25">
+                        <label for="name"><b>First Name</b><span class="required">*</label>
+                   </div>
+
+                   <div class="col-75">
+                        <input type="text" id="fn" name="firstname" placeholder="enter first name"  > 
+                         <a id="elmFNameError" class="errorMsg">&nbsp;</a>
+                   </div>
+
+               </div>
+                  
+    
+
+               <div class="row">
+
+                    <div class="col-25">
+                         <label for="name"><b>Last  Name</b><span class="required">*</label>
+                    </div>
+
+                    <div class="col-75">
+                         <input type="text" id="lname" name="lastname" placeholder="enter last name"  required > 
+                         <a id="elmLNameError" class="errorMsg">&nbsp;</a>
+                    </div>
+
+               </div>
+       
+               
+
+               <div class="row">
+
+                    <div class="col-25">
+                         <label for="number"><b>Phone No</b><span class="required">*</span></label>
+                    </div>
+              
+                    <div class="col-75">
+                         <input type="tel" class="number" id ="number" name="phone" placeholder="enter mobile no" required > 
+                         <a id="elmPhoneError" class="errorMsg">&nbsp;</a>
+                    </div>
+
+               </div>
+           
+                
+       
+               <div class="row">
+                      
+                    <div class="col-25">
+                         <label><b>Gender</b><span class="required">*</span></label>
+                    </div>
+          
+                    <div class="col-75">
+                         <label id = "gen" class="gender">
+                               <input  type="radio" id ="male" name="gender" value = "male" required > Male
+                               <input  type="radio" id ="female" name="gender" value ="female" required>female
+                         </label>
+                          <a id="elmGenderError" class="errorMsg">&nbsp;</a>
+                    </div>
+
+               </div>
+            
+
+                   
+         
+               <div class="row">
+
+                    <div class="col-25">
+                         <label><b>Address</b><span class="required">*</label>
+                    </div>
+        
+                    <div class="col-75">
+                         <textarea  class="add" id ="address" rows="4" cols="50" placeholder="enter address" required></textarea> 
+                         <a id="elmAddressError" class="errorMsg">&nbsp;</a>
+                    </div>
+
+               </div>
+             
+            
+               <div class="row">
+
+                    <div class="col-25">
+                         <label for="Country"><b>Country</b><span class="required" >*</span></label> 
+                    </div>
+             
+                    <div class="col-75">
+                         <select id="country" name="Country" required>
+                              <option disabled selected value, value="">Please Select Country</option>  
+                              <option>India</option>  
+                              <option>USA</option>  
+                              <option>Chaina</option>  
+                              <option>Rasia</option>  
+                              <option>Canada</option>  
+                         </select>
+                         <a id="elmCountryError" class="errorMsg">&nbsp;</a>
+                    </div>
+
+               </div>
+
+           
+         
+               <div class="row">
+
+                    <div class="col-25">
+                         <label for="state"><b>State</b><span class="required">*</label>  
+                    </div>
+              
+                    <div class="col-75">
+                         <select id="state" name="state">
+                              <option disabled selected value, value="" required>Please Select State</option>  
+                              <option>Gujrat</option>  
+                              <option>M.P</option>  
+                              <option>Rajasthan</option>  
+                              <option>Goa</option>  
+                              <option>U.P</option>  
+                         </select>
+                         <a id="elmStateError" class="errorMsg">&nbsp;</a>
+                    </div>
+
+               </div>
+   
+          
+
+               <div class="row">
+
+                    <div class="col-25">
+                         <label for="city"><b>City</b><span class="required">*</label>
+                    </div>
+             
+                    <div class="col-75">
+                         <select id="city" name="city">
+                              <option disabled selected value, value="" required>Please Select City</option>  
+                              <option>Surat</option>  
+                              <option>Morbi</option>  
+                              <option>Rajkot</option>  
+                              <option>Mumbai</option>  
+                              <option>Kolkata</option>  
+                         </select>
+                         <a id="elmCityError" class="errorMsg">&nbsp;</a>
+                    </div>
+
+               </div>
+             
+                 
+          
+               <div class="row">
+
+                    <div class="col-25">
+                         <label for="number"><b>Pincode</b><span class="required">*</label>
+                    </div>
+            
+                    <div class="col-75">
+                         <input class="pin" type="tel" id ="pincode" name="pincode" placeholder="enter pincode" required>
+                         <a id="elmPincode" class="errorMsg">&nbsp;</a>
+                    </div>
+
+               </div>
+
+               <div class="row">
+
+                    <div class="col-25">
+                         <label for="image"><b>Images</b><span class="required">*</label>
+                    </div>
+            
+                    <div class="col-75">
+                         <input type='file' id='imgInp' name="background-image"/>
+                         <a id="elmImages" class="errorMsg">&nbsp;</a>
+                    </div>
+
+               </div>
+              
+
+
+               <div class="row" align="center">
+                    <h3>
+                    <button  class="button" type="button"  onclick="insertRecord()" >
+                         <h3><b>Submit</b></h3>
+                    </button>
+                      <a id="submit" class="errorMsg"></a>
+                    </h3>
+               </div>
+         
+    </form>  
+
+</div> 
+
+
+     <table align="center" border="2">
+          <tr>
+               <td>
+                    Search:<input type="search" id="search" name="search">
+                    <td>
+                         <button type="button" onclick='Search()'>Enter</button>  
+                    </td>
+               </td>
+          </tr>
+     </table>
+
+
+     <table align="center" border="1" id="list">
+          <thead>
+               <th id="im">Images</th>
+               <th id="f">First name</th>
+               <th id="l">Last name</th>
+               <th id="pn">Phone No</th>
+               <th id="ad">Address</th>
+               <th id="g">Gender</th>
+               <th id="co">Country</th>
+               <th id="s">state</th>
+               <th id="c">city</th>
+               <th id="p">Pincode</th>
+               <th id="a">Action</th>
+          </thead>
+          <tbody id="tbody">
+
+          </tbody>
+     </table>
+<script src="validation.js" />
+<script type="text/javascript">
+     consol.log("hghghghgh")
+</script>
+</body>
+</html>
